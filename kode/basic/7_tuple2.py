@@ -1,0 +1,5 @@
+geometri = ('titik', 'garis', 'luas', 'volume')
+print(geometri[0])
+print(geometri[1])
+print(geometri[2])
+print(geometri[3])

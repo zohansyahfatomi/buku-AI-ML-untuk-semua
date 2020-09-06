@@ -1,0 +1,176 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Master Template Latex Buku  
+% Last edited : 23 Juni 2019 
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+% The original template (the Legrand Orange Book Template) can be found here --> http://www.latextemplates.com/template/the-legrand-orange-book
+%
+% Original author of the Legrand Orange Book Template:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% Original License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,
+12pt, %font size default
+fleqn, %left-justified equations
+]{book}
+
+%Definisi author dan judul buku
+\title{Pemrograman dan Komputasi Numerik}
+\author{Sholihun-Zohan Syah Fatomi}
+\date{\today}
+
+%\usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,letterpaper]{geometry} % Page margins
+\usepackage[top=3cm,bottom=3cm,left=4cm,right=3cm,headsep=8pt,a4paper]{geometry} % Page margins
+
+\usepackage{xcolor} % Required for specifying colors by name
+%\definecolor{ocre}{RGB}{210,105,30} % Define the orange color used for highlighting throughout the book
+\definecolor{ocre}{RGB}{0,0,0}
+
+% Font Settings
+\usepackage{avant} % Use the Avantgarde font for headings
+%\usepackage{times} % Use the Times font for headings
+\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
+
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{xcolor}
+
+% Bibliography
+%\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+%\addbibresource{bibliography.bib} % BibTeX bibliography file
+\RequirePackage{natbib}
+\bibliographystyle{humannat} %format daftar pustaka
+%\defbibheading{bibempty}{}
+
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+%\begingroup
+%\thispagestyle{empty}
+%\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1.25]{esahubble}}} % Image background
+%\centering
+%\vspace*{5cm}
+%\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+%\textbf{Clustering the interstellar medium}\\
+%{\LARGE Data Mining and Machine Learning in Astronomy}\par % Book title
+%\vspace*{1cm}
+%{\Huge Andrea Hidalgo}\par % Author name
+%\endgroup
+
+\includepdf[page={1}]{cover}
+
+
+%\begingroup
+%\definecolor{warna}{RGB}{0,0, 0}
+%\color{warna}
+%\thispagestyle{empty}
+%\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1.0]{cover}}} % Image background
+%\centering
+%\vspace*{5cm}
+%\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+%\textbf{Pemrograman dan Komputasi Numerik}\\
+%{\LARGE Menggunakan Pemrograman Python}\par % Book title
+%\vspace*{1cm}
+%{\Huge Sholihun}\par % Author name
+%{\Huge Zohan Syah Fatomi}\par % Author name
+%\endgroup
+%Dari begin-end
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+%\frontmatter
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent Copyright \copyright\ 2019 Sholihun\\ % Copyright notice
+
+\noindent \textsc{Departemen Fisika Fakultas MIPA, Universitas Gadjah Mada}\\
+
+\noindent \textsc{github.com/LaurethTeX/Clustering}\\ % URL
+
+\noindent Tulisan ini digunakan untuk mencoba halaman copyright apakah bisa atau tidak, terima kasih. \\ % License information
+
+\noindent \textit{\today} % Printing/edition date
+
+
+
+%----------------------------------------------------------------------------------------
+%	Kata Pengantar
+%----------------------------------------------------------------------------------------
+
+%BELUM muncul di dalam daftar isi. 
+ 
+\chapterimage{head1.png} % Table of contents heading image
+\pagestyle{empty} % No headers
+\pagestyle{fancy} % Print headers again 
+ \pagenumbering{roman} %Untuk halaman romawi
+\input{0_prakata}
+
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{head1.png} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+%\addcontentsline{toc}{chapter}{\lstlistoflistings}
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+
+
+%----------------------------------------------------------------------------------------
+%	Daftar Gambar dan Daftar Tabel
+%----------------------------------------------------------------------------------------
+
+%BELUM muncul di dalam daftar isi.
+\renewcommand{\listfigurename}{DAFTAR GAMBAR}
+\renewcommand{\listtablename}{DAFTAR TABEL}
+\renewcommand\bibname{DAFTAR PUSTAKA}
+
+
+\listoffigures
+ 
+\listoftables
+
+
+%----------------------------------------------------------------------------------------
+%	Daftar Listing
+%----------------------------------------------------------------------------------------
+%\lstlistoflistings
+ 
+
+
+\input{bab/0_pendahuluan}
+\input{bab/1_visualisasi_data}
+%\input{bab/14_parsial}
+\appendix
+\input{bab/15_glos}
+\input{bab/daftarpustaka}
+\printindex
+\end{document}

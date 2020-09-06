@@ -1,0 +1,5 @@
+print(f'absolut -100 : {abs(-100)}')
+print(f'nilai minimal dari 1, 3, 5, 7 : {min(1, 3, 5, 7)}')
+print(f'div mode (88,2): {divmod(88,2)}')
+print(f'3 pangkat 6 : {pow(3,6)}')
+print(f'panjang karakter lembu : {len("lembu")}')
